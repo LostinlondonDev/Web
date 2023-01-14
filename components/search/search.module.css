@@ -1,0 +1,33 @@
+.search{
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .search input[type=search]{
+    flex-grow: 3;
+    padding: 10px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid black;
+    outline: none;
+  }
+  
+  
+  
+  .search input:active{
+    border: 1px solid black;
+    outline: none;
+  }
+  .search input:focus{
+    border: 1px solid black;
+    outline: none;
+  }
+  
+  .search button{
+    flex-grow: 1;
+    background-color: var(--color-black-secundary);
+    color: white;
+    border-radius: 0 8px 8px 0;
+    border: none;
+  }

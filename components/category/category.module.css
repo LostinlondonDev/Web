@@ -1,0 +1,46 @@
+.category {
+  flex-grow: 1;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  cursor: pointer;
+}
+
+.category span {
+  color: white;
+}
+
+.sports {
+  background-color: var(--color-black);
+  color: var(--color-red);
+}
+
+.attractions {
+  background-color: var(--color-black-secundary);
+  color: var(--color-red);
+}
+
+.tours {
+  background-color: var(--color-red-secundary);
+  color: white;
+}
+
+.trains {
+  background-color: var(--color-red);
+  color: white;
+}
+
+.theatre {
+  background-color: var(--color-gray);
+  color: var(--color-red);
+}
+
+.theatre  span {
+    color: var(--color-black);
+}
+.nightlife {
+  background-color: var(--color-black-secundary);
+  color: var(--color-red);
+}

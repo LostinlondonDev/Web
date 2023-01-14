@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #ffffffb2;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  padding-right: 30px;
+}
