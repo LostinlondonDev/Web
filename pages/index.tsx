@@ -1,22 +1,28 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import Layout from "../components/layaout";
 import Search from "../components/search/search";
 import { traslate } from "../i18";
-import Link from "next/link";
 import { Env } from "../class/env.class";
 import { Category } from "../interfaces/category.interface";
-import { GetStaticProps, GetStaticPropsResult } from "next";
+import { GetStaticPropsResult } from "next";
 import CategoryCard from "../components/category/category";
 import Tittle from "../components/title/title";
+import Sections from "../components/sections/sections";
 
 interface Props {
   categories: Category[];
 }
 
 export default function Home({ categories }:Props) {
+
+  const sections = [
+    "UPCOMING_FOOTBALL",
+    "TOP_ATTRACTIONS",
+    "GREAT_DESTINATIONS",
+    "MOST_POPULAR_SHOWS",
+  ].map((section) => traslate(section));
   return (
     <Layout>
       <Head>
@@ -26,6 +32,15 @@ export default function Home({ categories }:Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles.banner}>
+      <div className={styles.singAgent}>
+          <Image
+            src="/imagenes/login-agent.png"
+            alt="login-agent"
+            height={20}
+            width={20}
+          />
+          <span>Agent Login</span>
+        </div>
         <div className={styles.title}>
           <span>{traslate("titleInit")}</span>
           <span>{traslate("titleEnd")}</span>
@@ -39,6 +54,7 @@ export default function Home({ categories }:Props) {
       </section>
       <main className={styles.products}>
          <Tittle title={traslate("DEALS_OFFERS")}/>
+         <Sections sections={sections} />
       </main>
     </Layout>
   );

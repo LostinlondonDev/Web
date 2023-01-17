@@ -1,0 +1,8 @@
+.sections{
+    display: flex;
+
+}
+
+.sections span {
+    flex-grow: 1;
+}
