@@ -1,0 +1,16 @@
+.buttonNext {
+  position: absolute;
+  z-index: var(--z-index-primary);
+  top: 47%;
+  right: 7px;
+}
+.buttonBack {
+  position: absolute;
+  z-index: var(--z-index-primary);
+  top: 47%;
+  left: 7px;
+}
+.slideItem {
+  width: 329px;
+  margin-right: 20px;
+}

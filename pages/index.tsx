@@ -10,12 +10,16 @@ import { GetStaticPropsResult } from "next";
 import CategoryCard from "../components/category/category";
 import Tittle from "../components/title/title";
 import Sections from "../components/sections/sections";
+import SubTittle from "../components/subtittle/subtitle";
+import Swiper from "../components/swiper/swiper";
+import { Service } from "../interfaces/services.interface";
 
 interface Props {
   categories: Category[];
+  services: Service[]
 }
 
-export default function Home({ categories }:Props) {
+export default function Home({ categories ,services}:Props) {
 
   const sections = [
     "UPCOMING_FOOTBALL",
@@ -52,18 +56,46 @@ export default function Home({ categories }:Props) {
           <CategoryCard key={category._id} category={category} />
         ))}
       </section>
-      <main className={styles.products}>
-         <Tittle title={traslate("DEALS_OFFERS")}/>
-         <Sections sections={sections} />
-      </main>
+      <section className={styles.products}>
+        <div className={styles.dealsTittle}>
+          <Tittle title={traslate("DEALS_OFFERS")} />
+          <Sections sections={sections} />
+        </div>
+        <div className={styles.swiperWhite}>
+          <SubTittle subtitle={traslate("UPCOMING_FOOTBALL")} />
+          <section className={styles.services}>
+            <Swiper services={services} backGroundColorCard="#f1f1f1" />
+          </section>
+        </div>
+        <div className={styles.swiperGray}>
+          <SubTittle subtitle={traslate("TOP_ATTRACTIONS")} />
+          <section className={styles.services}>
+            <Swiper services={services} />
+          </section>
+        </div>
+        <div className={styles.swiperWhite}>
+          <SubTittle subtitle={traslate("GREAT_DESTINATIONS")} />
+          <section className={styles.services}>
+            <Swiper services={services} backGroundColorCard="#f1f1f1"/>
+          </section>
+        </div>
+        <div className={styles.swiperGray}>
+          <SubTittle subtitle={traslate("MOST_POPULAR_SHOWS")} />
+          <section className={styles.services}>
+            <Swiper services={services} />
+          </section>
+        </div>
+      </section>
     </Layout>
   );
 }
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<Props>> {
-  const response = await fetch(`${Env.apiUrl}/categories`);
-  const categories = (await response.json()) as Category[];
+  const responseCategories = await fetch(`${Env.apiUrl}/categories`);
+  const categories = (await responseCategories.json()) as Category[];
+  const responseServices = await fetch("http://localhost:4500/services");
+  const services = await responseServices.json() as Service[];
   return {
-    props : {categories}
+    props : {categories,services}
   }
 }

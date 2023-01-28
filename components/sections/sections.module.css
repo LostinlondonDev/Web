@@ -1,8 +1,12 @@
 .sections{
-    display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .sections span {
-    flex-grow: 1;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center
 }

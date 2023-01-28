@@ -1,7 +1,7 @@
 import styles from "./category.module.css";
-import { Category } from "../../../../../../interfaces/category.interface";
-import Image from "next/image";
 
+import Image from "next/image";
+import { Category } from "../../interfaces/category.interface";
 interface Props {
   category: Category;
 }

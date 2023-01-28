@@ -1,5 +1,6 @@
-.banner{
-  background-image: url('./../public/imagenes/banner.jpeg');
+/* Banner Styles */
+.banner {
+  background-image: url("./../public/imagenes/banner.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -8,14 +9,15 @@
   align-items: center;
   padding: 100px;
   box-sizing: border-box;
+  position: relative;
 }
 
-.title{
+.title {
   display: flex;
   flex-direction: column;
 }
 
-.title span:first-of-type{
+.title span:first-of-type {
   font-size: 121px;
   color: white;
   text-shadow: 1px 1px 8px black;
@@ -27,22 +29,6 @@
   color: white;
   text-shadow: 1px 1px 8px black;
   font-weight: 900;
-}
-
-
-.categories{
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 80px;
-}
-
-.products{
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
 }
 
 .singAgent {
@@ -58,4 +44,45 @@
   gap: 10px;
   font-size: 13px;
   box-sizing: border-box;
+}
+
+/* Categories Styles */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-auto-rows: 80px;
+  width: 100%;
+}
+
+/* Products Styles */
+
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.services {
+  width: 100%;
+  height: 420px;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.swiperWhite {
+  padding: 50px;
+}
+
+.swiperGray {
+  padding: 50px;
+  background-color: #f1f1f1;
+}
+
+.dealsTittle {
+  padding: 50px;
 }

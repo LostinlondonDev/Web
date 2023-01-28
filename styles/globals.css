@@ -9,6 +9,8 @@
   --color-red: #ff0000;
   --color-red-secundary: #910101;
   --color-gray: #cccccc;
+  --z-index-primary: 1000;
+  --z-index-secundary: 100;
 }
 
 html,
@@ -23,3 +25,5 @@ footer{
   height: 200px;
   display: flex;
 }
+
+@import "swiper/css";
