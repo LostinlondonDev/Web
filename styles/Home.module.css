@@ -34,7 +34,7 @@
 .singAgent {
   position: absolute;
   top: 129px;
-  right: -50px;
+  right: -43px;
   z-index: var(--z-index-secundary);
   transform: rotate(-90deg);
   background-color: var(--color-black);
