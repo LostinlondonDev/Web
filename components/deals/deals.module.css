@@ -1,0 +1,19 @@
+.deals{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dealSmalls{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+
+}
+
+.listDeal{
+    display: flex;
+    flex-direction: column;
+}

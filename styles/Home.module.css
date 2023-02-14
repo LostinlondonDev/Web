@@ -86,3 +86,19 @@
 .dealsTittle {
   padding: 50px;
 }
+
+.moreDeal{
+  padding: 15px 50px;
+ 
+}
+
+.moreDeal span{
+  background-color: var(--color-black);
+  display: grid;
+  place-items: center;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  font-size: 30px;
+  height: 70px;
+}

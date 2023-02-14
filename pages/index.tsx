@@ -13,14 +13,15 @@ import Sections from "../components/sections/sections";
 import SubTittle from "../components/subtittle/subtitle";
 import Swiper from "../components/swiper/swiper";
 import { Service } from "../interfaces/services.interface";
+import Deals from "../components/deals/deals";
 
 interface Props {
   categories: Category[];
-  services: Service[]
+  services: Service[];
+  deals: Service[];
 }
 
-export default function Home({ categories ,services}:Props) {
-
+export default function Home({ categories, services, deals }: Props) {
   const sections = [
     "UPCOMING_FOOTBALL",
     "TOP_ATTRACTIONS",
@@ -36,7 +37,7 @@ export default function Home({ categories ,services}:Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles.banner}>
-      <div className={styles.singAgent}>
+        <div className={styles.singAgent}>
           <Image
             src="/imagenes/login-agent.png"
             alt="login-agent"
@@ -76,7 +77,7 @@ export default function Home({ categories ,services}:Props) {
         <div className={styles.swiperWhite}>
           <SubTittle subtitle={traslate("GREAT_DESTINATIONS")} />
           <section className={styles.services}>
-            <Swiper services={services} backGroundColorCard="#f1f1f1"/>
+            <Swiper services={services} backGroundColorCard="#f1f1f1" />
           </section>
         </div>
         <div className={styles.swiperGray}>
@@ -85,17 +86,28 @@ export default function Home({ categories ,services}:Props) {
             <Swiper services={services} />
           </section>
         </div>
+        <div className={styles.swiperWhite}>
+          <SubTittle subtitle={traslate("DEALS_AND_OFFERS")} />
+          <Deals deals={deals}/>
+        </div>
+        <div className={styles.moreDeal}>
+          <span>{traslate("SEE_MORE_DEALS")}</span>
+        </div>
       </section>
     </Layout>
   );
 }
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<Props>> {
-  const responseCategories = await fetch(`${Env.apiUrl}/categories`);
-  const categories = (await responseCategories.json()) as Category[];
-  const responseServices = await fetch("http://localhost:4500/services");
-  const services = await responseServices.json() as Service[];
+  const responses = await Promise.all([
+    fetch(`${Env.apiUrl}/categories`),
+    fetch("http://localhost:4500/services"),
+    fetch("http://localhost:4500/deals"),
+  ]);
+  const [categories, services,deals] = await Promise.all(
+    responses.map((response) => response.json())
+  );
   return {
-    props : {categories,services}
-  }
+    props: { categories, services, deals },
+  };
 }

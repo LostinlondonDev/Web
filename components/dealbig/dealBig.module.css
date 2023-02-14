@@ -1,0 +1,63 @@
+
+  
+  .bigDeal {
+    grid-area: bigdeal;
+    display: flex;
+    height: 400px;
+    background-color: var(--color-gray-ligth);
+    margin-top: 20px;
+  }
+  
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    flex-grow: 3;
+  }
+  
+  .description span {
+    font-weight: bolder;
+    font-size: 30px;
+  }
+  
+  .infoPrice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  
+  .discount {
+    background-color: var(--color-red);
+    color: white;
+    height: 50px;
+    width: 300px;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    border-radius: 0px 0px 0px 25px;
+    font-weight: bolder;
+  }
+  
+  .image {
+    flex-grow: 1;
+  }
+  
+  .price {
+    text-align: end;
+    padding-right: 20px;
+    margin-bottom: 30px;
+  }
+  .price div {
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  
+  .price span {
+    font-weight: bolder;
+    font-size: 30px;
+    color: var(--color-red);
+  }
+  
+ 
