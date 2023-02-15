@@ -2,7 +2,8 @@ import styles from "./header.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import SelectLenguage from "../selectLenguaje/SelectLenguage";
+import SelectLenguage from "../home/selectLenguaje/SelectLenguage";
+
 
 export default function Header() {
  

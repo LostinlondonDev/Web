@@ -2,18 +2,19 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Layout from "../components/layaout";
-import Search from "../components/search/search";
 import { traslate } from "../i18";
 import { Env } from "../class/env.class";
 import { Category } from "../interfaces/category.interface";
 import { GetStaticPropsResult } from "next";
-import CategoryCard from "../components/category/category";
-import Tittle from "../components/title/title";
-import Sections from "../components/sections/sections";
-import SubTittle from "../components/subtittle/subtitle";
-import Swiper from "../components/swiper/swiper";
 import { Service } from "../interfaces/services.interface";
-import Deals from "../components/deals/deals";
+import Tittle from "../components/home/title/title";
+import Sections from "../components/home/sections/sections";
+import SubTittle from "../components/home/subtittle/subtitle";
+import Swiper from "../components/home/swiper/swiper";
+import Deals from "../components/home/deals/deals";
+import Search from "../components/home/search/search";
+import CategoryCard from "../components/home/category/category";
+
 
 interface Props {
   categories: Category[];

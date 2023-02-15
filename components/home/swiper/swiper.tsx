@@ -1,9 +1,11 @@
 import styles from "./swiper.module.css";
 import { Swiper as SwiperComponet, SwiperRef, SwiperSlide } from "swiper/react";
-import CardService from "../cardService/card";
+import Image from 'next/image'
 import { useRef } from "react";
 import { Autoplay, Navigation } from "swiper";
-import { Service } from "../../interfaces/services.interface";
+import { Service } from "../../../interfaces/services.interface";
+import CardService from "../cardService/card";
+
 
 
 
@@ -57,12 +59,22 @@ export default function Swiper({ services, backGroundColorCard }: Props) {
           </SwiperSlide>
         ))}
       </SwiperComponet>
-      <button onClick={next} className={styles.buttonNext}>
-        {">"}
-      </button>
-      <button onClick={back} className={styles.buttonBack}>
-        {"<"}
-      </button>
+      <Image
+        src="/imagenes/arrow_rigth_gray.png"
+        alt="rigth"
+        width={20}
+        height={30}
+        className={styles.buttonNext}
+        onClick={next} 
+      />
+       <Image
+        src="/imagenes/arrow_left_gray.png"
+        alt="rigth"
+        width={20}
+        height={30}
+        className={styles.buttonBack}
+        onClick={back} 
+      />
     </>
   );
 }

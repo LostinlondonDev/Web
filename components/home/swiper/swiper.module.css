@@ -1,14 +1,16 @@
 .buttonNext {
   position: absolute;
   z-index: var(--z-index-primary);
-  top: 47%;
-  right: 7px;
+  top: 46%;
+  right: 0px;
+  cursor: pointer;
 }
 .buttonBack {
   position: absolute;
   z-index: var(--z-index-primary);
-  top: 47%;
-  left: 7px;
+  top: 46%;
+  left: 0px;
+  cursor: pointer;
 }
 .slideItem {
   width: 329px;
