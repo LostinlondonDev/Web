@@ -16,7 +16,7 @@ interface Props {
         <main>
           {children}
         </main>
-        <Footer categories={categories}/>
+        <Footer categories={categories!}/>
         </>
         
     );
