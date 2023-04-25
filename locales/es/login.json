@@ -1,0 +1,9 @@
+{
+  "TITLE_PAGE": "login",
+  "MESSAGE_TIP": "Welcome to Lost in London, join us to continue with the payment",
+  "EMAIL": "EMAIL",
+  "PASSWORD": "PASSWORD",
+  "FORGOT_PASSWORD": "Forgot your password",
+  "HAS_ACOOUNT": "New here, create an account",
+  "FIELD_IS_REQUIRED": "Field is required*"
+}

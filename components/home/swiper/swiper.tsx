@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useRef } from "react";
 import { Autoplay, Navigation } from "swiper";
 import { Service } from "../../../interfaces/services.interface";
-import CardService from "../cardService/card";
+import CardService from "../../cardService/card";
 
 
 

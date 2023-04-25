@@ -1,0 +1,18 @@
+.button {
+    background-color: var(--color-red);
+    height: fit-content;
+    cursor: pointer;
+    border: none;
+    padding: 8px 10px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--color-red-secundary);
+    transform: translateY(3px);
+    
+}

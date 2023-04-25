@@ -1,0 +1,36 @@
+.breadcrumbs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .breadcrumbs li {
+    display: inline-block;
+  }
+
+  .breadcrumbs li:first-child{
+    margin-left: 20px;
+  }
+  
+  .breadcrumbs li:not(:last-child) a {
+    margin-right: 5px;
+  }
+  
+  .breadcrumbs li:not(:last-child) span {
+    margin-right: 5px;
+  }
+  
+  .breadcrumbs li span {
+    color: var(--color-black-secundary);
+  }
+  
+  .breadcrumbs li a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #CCCCCC;
+  }
+  
+  .breadcrumbs .active, .breadcrumbs li a:hover{
+    text-decoration: underline;
+    color: var(--color-red);
+  }

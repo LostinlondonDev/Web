@@ -1,0 +1,12 @@
+{
+  "TITLE": "CREATE AN ACCOUNT",
+  "DETAILS": "Personal Details",
+  "TERMS": "Terms and conditions",
+  "TERMS_DESCRIPTION": "Lost in London is committed to protecting and respecting your privacy, well only use your personal information to administer your account and to provide the products and services you requested from us. From time to time, we would like to contact you about our products and services, as well as other content that may be of interest to you. If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you:",
+  "ACCEPT_TERMS": "I agree to receive marketing emails from Lost in London (Optional).",
+  "SECOND_TERMS": "By clicking submit below, you consent to allow Lost in London to store and process the personal information submitted above to provide you the content requested",
+  "OPTION_TERMS": "I agree to allow Lost in London to store and process my personal data.I have read and accept the Terms and Conditions and Privacy Policy",
+  "MESSAGE_TERMS": "You may unsubscribe from these communications at anytime.For more information on how to unsubscribe, our privacy practices, and how we are committed to protecting and respecting your privacy, please review our ;privacy policy",
+  "BUTTON": "Save",
+  "FIELDS": "First Name,Last Name,Dial Code,Phone Number,Country,Birth Date,Email,Password,Confirm Password"
+}
