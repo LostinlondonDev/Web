@@ -9,13 +9,16 @@ import { Category } from "../../interfaces/category.interface";
 import { GetStaticPropsResult } from "next";
 import { Env } from "../../class/env.class";
 import Layout from "../../components/layaout";
-
+import { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 interface Props {
   categories: Category[];
 }
 
 export default function SignUp({ categories }: Props) {
   const { locale: lenguaje } = useRouter();
+  const [date, setDate] = useState<Date | null>(new Date());
   const traslate = (value: string) => traslateNs(value, "singUp");
   const [
     firstName,
@@ -66,7 +69,12 @@ export default function SignUp({ categories }: Props) {
                   <Input label={`${country}*`} />
                 </div>
                 <div className={styles.input}>
-                  <Input label={`${birthDate}*`} />
+                  <DatePicker
+                    startDate={date}
+                    showIcon
+                    dateFormat="yyyy/MM/dd"
+                    onChange={(date) => setDate(date)}
+                  />
                 </div>
                 <div className={styles.email}>
                   <Input label={`${email}*`} />
