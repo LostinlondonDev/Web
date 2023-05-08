@@ -1,0 +1,91 @@
+.loginForm {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    
+}
+.loginForm h2 {
+    text-shadow: 0px 3px 6px #00000029;
+    color: var(--color-black-secundary);
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.loginForm p {
+    color: #707070;
+    word-wrap: break-word;
+    padding: 0 7rem;
+    text-align: center;
+}
+
+.form {
+    margin-top: 2rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form div:last-child{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.link {
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(114, 114, 114);
+}
+
+.cteCount {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cteCount span {
+    color: #707070;
+}
+.cteCount a {
+    margin-top: 1rem;
+}
+.cteCount span > a {
+    color: var(--color-red);
+}
+
+.input input{
+    width: 100%;
+}
+
+.button{
+    width: 100%;
+}
+
+.error {
+    background-color: #ff00001a;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    height: 50px;
+    width: 350px;
+    border: 1px solid #ff9090;
+    font-size: 13px;
+    font-weight: 100;
+    color: #000000c8;
+}
+
+.error strong {
+    color: #aa0000;
+    font-size: 21px;
+    cursor: pointer;
+}
+

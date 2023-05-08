@@ -5,5 +5,8 @@
   "PASSWORD": "PASSWORD",
   "FORGOT_PASSWORD": "Forgot your password",
   "HAS_ACOOUNT": "New here, create an account",
-  "FIELD_IS_REQUIRED": "Field is required*"
+  "FIELD_IS_REQUIRED": "Field is required*",
+  "EMAIL_IS_INVALID": "Email Invalid",
+  "VALUE_IS_INVALID": "Value Invalid",
+  "LOGIN_INCORRECT": "Incorrect username or password."
 }

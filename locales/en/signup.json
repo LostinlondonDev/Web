@@ -8,5 +8,10 @@
   "OPTION_TERMS": "I agree to allow Lost in London to store and process my personal data.I have read and accept the Terms and Conditions and Privacy Policy",
   "MESSAGE_TERMS": "You may unsubscribe from these communications at anytime.For more information on how to unsubscribe, our privacy practices, and how we are committed to protecting and respecting your privacy, please review our ;privacy policy",
   "BUTTON": "Save",
-  "FIELDS": "First Name,Last Name,Dial Code,Phone Number,Country,Birth Date,Email,Password,Confirm Password"
+  "FIELDS": "First Name,Last Name,Dial Code,Phone Number,Country,Birth Date,Email,Password,Confirm Password",
+  "FIELD_IS_REQUIRED": "Field is required*",
+  "FIELD_IS_OPTIONAL": "Optional",
+  "EMAIL_IS_INVALID": "Email Invalid",
+  "VALUE_IS_INVALID": "Value Invalid",
+  "CONFIRM_PASSWORD_INVALID": "Passwords do not match"
 }

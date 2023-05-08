@@ -1,0 +1,75 @@
+  
+  .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    height: 200px;
+    overflow: auto;
+    z-index: 1000;
+  }
+  
+  .option {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .option:hover {
+    background-color: #f2f2f2;
+  }
+
+  .box{
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.box span {
+    font-size: 1rem;
+    color: #00000099;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.box input{
+    box-sizing: border-box;
+    padding:10px;
+    border-radius: 8px;
+    border: 1px solid #00000099;   
+}
+
+
+.box input:focus {
+    outline-color: #910101;
+}
+
+
+
+.box :not(input[value=""]) ~ span,.box input:focus ~ span{
+    color: black ;
+    padding: 10px;
+    transform: translateX(-10px) translateY(-33px);
+}
+
+.invalid{
+  outline-color: red !important;
+  border-color: red !important;
+}
+
+.labelInvalid{
+  color: red !important;
+}
+

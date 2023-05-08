@@ -10,28 +10,13 @@ import { GetStaticPropsResult } from "next";
 import { Category } from "../../interfaces/category.interface";
 import { Env } from "../../class/env.class";
 import { useForm } from "../../hooks/userForm";
-
-interface Login {
-  email: string;
-  password: string;
-}
+import { LoginForm } from "../../components/login/login";
 
 interface Props {
   categories: Category[];
 }
 
 export default function LoginPage({ categories }: Props) {
-  const traslate = (value: string) => traslateNs(value, "login");
-  const newHere = `${traslate("HAS_ACOOUNT").split(",")[0]} ? `;
-  const createAccount = traslate("HAS_ACOOUNT").split(",")[1]?.toUpperCase();
-  const forgotPassword = `${traslate("FORGOT_PASSWORD")} ?`;
-
-  const { handleChange, handleSubmit } = useForm<Login>({
-    email: "",
-    password: "",
-  });
-
-  // const { register, handleSubmit } = useForm>()
 
   return (
     <Layout categories={categories}>
@@ -39,56 +24,7 @@ export default function LoginPage({ categories }: Props) {
         <div className={styles.bgImage}>
           <Image src={banner} alt="banner_login" />
         </div>
-        <div className={styles.loginForm}>
-          <h2>{traslate("TITLE_PAGE")}</h2>
-          <p>{traslate("MESSAGE_TIP")}</p>
-          <form
-            className={styles.form}
-            onSubmit={(e) =>
-              handleSubmit(e, (values, valid) => {
-                console.log(values, valid);
-                if (valid) {
-                  alert("login");
-                } else {
-                  alert("error");
-                }
-              })
-            }
-          >
-            <div className={styles.input}>
-              <Input
-                label={`${traslate("EMAIL")}`}
-                onChange={handleChange}
-                name="email"
-                type="email"
-                required
-              />
-              <span>{traslate("FIELD_IS_REQUIRED")}</span>
-            </div>
-            <div className={styles.input}>
-              <Input
-                label={`${traslate("PASSWORD")}`}
-                type="password"
-                name="password"
-                onChange={handleChange}
-                required
-              />
-              <span>{traslate("FIELD_IS_REQUIRED")}</span>
-            </div>
-            <div>
-              <Button className={styles.button}>Login</Button>
-            </div>
-          </form>
-          <div className={styles.cteCount}>
-            <Link href="/forgotpassword" className={styles.link}>
-              {forgotPassword}
-            </Link>
-            <span>
-              {newHere}
-              <Link href={`/signup`}>{createAccount}</Link>
-            </span>
-          </div>
-        </div>
+         <LoginForm/>
       </div>
     </Layout>
   );

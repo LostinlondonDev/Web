@@ -9,10 +9,17 @@
     font-weight: bold;
     border-radius: 10px;
     transition: all 0.2s ease-in-out;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .button:hover {
     background-color: var(--color-red-secundary);
-    transform: translateY(3px);
-    
+    transform: translateY(3px);  
+}
+
+.button:disabled {
+    opacity: 0.6;
 }

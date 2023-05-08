@@ -1,16 +1,27 @@
-import styles from "./input.module.css"
+import { LegacyRef } from "react";
+import styles from "./input.module.css";
 
 type inputProps = React.InputHTMLAttributes<HTMLInputElement> & {
-  label:string
-}
+  label: string;
+  invalid?: boolean;
+  ref?: LegacyRef<HTMLInputElement> | undefined
+};
 
-const Input = ({label,...props}:inputProps) => {
+const Input = ({ label,ref,invalid = false,...props }: inputProps) => {
+  const classInput = invalid ? styles.invalid : "";
+  const classLabel = invalid ? styles.labelInvalid : "";
+
   return (
     <div className={styles.box}>
-        <input {...props} required type={props.type ? props.type : "text"}/>
-        <span >{label}</span>
+      <input
+        ref={ref}
+        {...props}
+        type={props.type ? props.type : "text"}
+        className={classInput}
+      />
+      <span className={classLabel}>{label}</span>
     </div>
-  )
-}
+  );
+};
 
-export default Input
+export default Input;
